@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA VI Trophy Guide &amp; Tracker — 55 trophies, offline</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div>
+    <h1>GTA VI Trophy Guide &amp; Tracker</h1>
+    <p class="sub">All 55 official PlayStation 5 trophies — 1 platinum · 2 gold · 6 silver · 46 bronze — with a guide for each, a roadmap to the platinum, and a checklist that saves in your browser. Works fully offline; no account, no network.</p>
+  </div>
+  <div class="progress" aria-live="polite">
+    <p id="progressText">0 of 55 earned</p>
+    <div class="bar"><div id="barFill"></div></div>
+    <p id="gradeCounts" class="counts"></p>
+  </div>
+</header>
+
+<nav class="stages" aria-label="Roadmap stages">
+  <a href="#roadmap"><strong>Stage 1</strong> Story · Ch.1–4 + finale</a>
+  <a href="#roadmap"><strong>Stage 2</strong> Strangers · 8 strands</a>
+  <a href="#roadmap"><strong>Stage 3</strong> Activities · ranges, races</a>
+  <a href="#roadmap"><strong>Stage 4</strong> Leonida cleanup</a>
+  <a href="#roadmap"><strong>Stage 5</strong> Money + 100% → Platinum</a>
+</nav>
+
+<section class="controls" aria-label="Filters and progress tools">
+  <label class="search">Search <input id="search" type="search" placeholder="Trophy, mission or place…" autocomplete="off"></label>
+  <div class="kinds" id="kinds" role="group" aria-label="Filter by kind">
+    <button type="button" data-kind="all" class="on">All</button>
+    <button type="button" data-kind="story">Story</button>
+    <button type="button" data-kind="mission">Missions</button>
+    <button type="button" data-kind="stranger">Strangers</button>
+    <button type="button" data-kind="missable">⚠ Missable</button>
+    <button type="button" data-kind="collectible">Collectibles</button>
+    <button type="button" data-kind="activity">Activities</button>
+    <button type="button" data-kind="combat">Combat &amp; heists</button>
+    <button type="button" data-kind="exploration">Exploration</button>
+    <button type="button" data-kind="money">Money</button>
+    <button type="button" data-kind="online">Online</button>
+  </div>
+  <div class="row2">
+    <label>Grade <select id="grade"><option value="all">All grades</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
+    <label>Show <select id="status"><option value="all">All trophies</option><option value="remaining">Remaining</option><option value="earned">Earned</option></select></label>
+    <label class="spoiler"><input id="spoiler" type="checkbox"> Spoiler-safe: hide story trophies until earned</label>
+    <button id="expandAll" type="button">Open all guides</button>
+    <button id="export" type="button">Export progress</button>
+    <label class="import">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+    <button id="reset" type="button">Reset</button>
+  </div>
+  <p id="filterNote" class="note"></p>
+</section>
+
+<main>
+  <ol id="rows" class="rows"></ol>
+  <p id="empty" class="empty" hidden></p>
+
+  <section id="roadmap" class="roadmap" aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the platinum — “Vice Got a Price!”</h2>
+    <p class="note">Built from the official descriptions only: which story chapters and missions, which collectibles and counts, in what order. <strong>21 trophies are flagged missable</strong> — every one tied to a single story beat, mission or choice. Do those on your first pass; story missions can be replayed from the pause menu where the game offers it, but that replay is the safety net, not the plan. Everything else is repeatable in free roam, so the cleanup stages can wait until after the story.</p>
+    <div id="roadmapStages"></div>
+  </section>
+
+  <section class="sources" aria-label="Sources and notes">
+    <h2>Sources &amp; honesty notes</h2>
+    <ul>
+      <li><strong>Every trophy's requirement</strong> comes from the official PlayStation trophy list as published (Exophase &amp; PSNProfiles listed it on 18 Nov 2026 and agree on all 55 names, descriptions and grades). Each guide below names that source beside it.</li>
+      <li><strong>How-to steps are the author's own words</strong>, derived from the official description — never copied from another guide. Where a step is an inference from the description (for example, that a count is cumulative), the guide says so by describing what the description asks for.</li>
+      <li><strong>Missable flags</strong> are read from the official descriptions, not from playing the game: anything tied to one mission, chapter or choice is flagged. The game launched 19 Nov 2026; if mission replay turns out to cover a flagged trophy, the flag still did its job — it made you do it first.</li>
+      <li><strong>Online:</strong> no online trophies in the official list — 0 of 55 need online play.</li>
+      <li><strong>Offline:</strong> this app loads nothing over the network. Your checklist lives in this browser (localStorage); export it to keep a copy.</li>
+      <li>No Rockstar Games logo, official artwork, box art or game screenshot is used anywhere in this guide — the look is its own.</li>
+    </ul>
+  </section>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>
